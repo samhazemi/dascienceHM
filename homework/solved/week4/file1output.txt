@@ -1,0 +1,77 @@
+For  purchase data file
+Total Players 
+          573
+
+Purchase_analysis
+Average Purchase Price Number of Unique Items Total Purchases Total Revenue 
+ 0          $2.92                          64              78       $228.10
+
+
+ Gender Demographics 
+
+                           # of Players            % of Players 
+Gender                               60                    81.1%  
+Female                               13                    17.6% 
+Other / Non-Disclosed                 1                     1.4%
+
+ 
+Purchasing Analysis (Gender)
+           # of Purchases Total Purchase        Value          Average Purchase Price Normalized Totals 
+Gender 
+Female                 13          $41.38       $3.18                                              $3.18                                                        $3.18 
+Male                   64         $184.60       $2.88                                              $3.08                                                      $3.08 
+Other / Non-Disclosed   1           $2.12       $2.12                                              $2.12
+
+Age Demographics
+
+          # of Purchases	Average Purchase    Price	Total Purchase Value	# of Purchasers	Normalized Totals
+Age				
+10 - 14         	3	           $2.99    $8.96	                   3	                            $2.99
+15 - 19	               11	           $2.76   $30.41	                  11	                            $2.76
+20 - 24	               36	           $3.02  $108.89	                  34	                            $3.20
+25 - 29	                9	           $2.90   $26.11	                   8	                            $3.26
+30 - 34	                7	           $1.98   $13.89	                   6	                            $2.31
+35 - 39          	6	           $3.56   $21.37	                   6	                            $3.56
+< 10	                5	           $2.76   $13.82	                   5	                            $2.76
+> 40	                1	           $4.65    $4.65                          1	                            $4.65
+
+
+Top 5 Spenders
+
+                                      Total Purchase  Value	Purchase Count	Average Purchase Price
+SN			
+Sundaky                                           74  $7.41	             2	                  $3.71
+Aidaira                                           26  $5.13	             2	                  $2.56
+Eusty                                             71  $4.81	             1	                  $4.81
+Chanirra                                          64  $4.78	             1	                  $4.78
+Alarap                                            40  $4.71	             1	                  $4.71
+
+
+Most Popular Items
+
+                  	Item Name	Purchase Count	Item Price	Total Purchase Value
+Item ID				
+94	           Mourning Blade	           3         $3.64	              $10.92
+90	                 Betrayer	           2	     $4.12	               $8.24
+111	             Misery's End	           2	     $1.79	               $3.58
+64	            Fusion Pummel	           2	     $2.42	               $4.84
+154                  Feral Katana	           2	     $4.11	               $8.22
+126	 Exiled Mithril Longsword	           2	     $1.08	               $2.16
+
+Most Profitable Items
+
+				
+				
+				
+				
+					Item Name	Purchase Count	Item Price	Total Purchase Value
+Item ID				
+     94	                           Mourning Blade	             3       $3.64	              $10.92
+    117	        Heartstriker, Legacy of the Light	             2       $4.71	               $9.42
+     93	                 Apocalyptic Battlescythe	             2	     $4.49	               $8.98
+     90	                                 Betrayer	             2	     $4.12	               $8.24     
+    154	                             Feral Katana	             2	     $4.11	               $8.22
+
+
+
+

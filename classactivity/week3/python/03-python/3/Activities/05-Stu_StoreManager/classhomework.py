@@ -1,0 +1,20 @@
+stor_dict={}
+keep_going="Y"
+while keep_going == "Y":
+  action_item=input("what you want me todo? (A),(R),(S)")
+  if action_item=="A":
+     item_to_be_added=input("what you want to be added")
+     number_of_item=input("how many do you want to added")
+     stor_dict[item_to_be_added]=number_of_item
+  elif action_item=="R":
+       remove_what=input("which item you want to be removed")
+       if remove_what in stor_dict.keys():
+         del stor_dict[remove_what] 
+         print(remove_what," has been removed")
+       else:
+         print("this item this does not exist")
+  elif action_item== "S":
+        for item , quntity in stor_dict.items:
+         print(item_to_be_added," ",number_of_item)
+ 
+  keep_going=input("would you like to go on")

@@ -1,0 +1,17 @@
+ pybank  output file 1
+Financial Analysis
+------------------
+Total Months: 41
+Totat Revenue: $18971412
+Average Change: $883934.0
+Greatest Increase: Feb-16 ($1837235)
+Greatest Decrease: Aug-14 ($-1779747)
+
+pybank  output file 2
+Financial Analysis
+--------------------------
+Total Months: 41
+Totat Revenue: $18971412
+Average Change: $883934.0
+Greatest Increase: Feb-16 ($1837235)
+Greatest Decrease: Aug-14 ($-1779747)

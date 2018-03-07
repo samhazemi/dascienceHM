@@ -1,0 +1,26 @@
+import os
+import csv
+import operator 
+file_numbers=['1','2']
+max_row=[]
+min_row=[]
+for filenum in file_numbers:
+    pybankcsv= os.path.join( 'budget_data_' + filenum +'.csv')
+    with open(pybankcsv,'r') as csvfile:
+                csvreader=csv.reader(csvfile,delimiter=",")
+                next(csvreader)
+                revenue_holder=[]
+                Total_revenue=0
+                Total_months=0
+                for row in csvreader:
+                    revenue=row[1]
+                    month_holder=row[0]
+                    revenue_holder.append(str(month_holder),int(revenue))
+                    Total_revenue=Total_revenue+int(revenue)
+                    Total_months += 1
+                    max_row=max(csv.reader(csvreader),key=operator.itemgetter(1))
+                    min_row=min(csv.reader(csvreader),key=operator.itemgetter(1))
+print("Total Months:", str(Total_months) )
+print("Total Revenue:" , str(Total_revenue) )
+print("Greatest Increase in Revenue: ", max_row)
+print("Greatest Decrease in Revenue: ", min_row)
