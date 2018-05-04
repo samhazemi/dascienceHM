@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="shortcut icon" href="">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,10 +11,10 @@
 </head>
 
 <body>
-  <div class="container">
+  <div clas="container">
     <div class="jumbotron text-center">
       <h1>Mission to Scrape Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars</a></p>
     </div>
 
     <!-- surf data -->
@@ -36,14 +37,14 @@
       <div class="col-md-12">
               <div class="panel-body">
                   <h4>Mars Weather</h4>
-                  <p>{{mars.mars_weather}}</p>
+                  <p>{{mars.Mars_Weather}}</p>
               </div>
-          </div>
-
-
       </div>
 
-    
+
+    </div>
+
+    <!-- Mars Facts -->
     <div class="row" id="mars-facts">
       <div class="col-md-12">
         <h4>Mars Facts</h4>
@@ -99,19 +100,40 @@
         </table>
       </div>
 </div>
-<div class="row" style="margin-top:80px;">
-    <h2 class="text-center">Mars Hemispheres</h2>
-  </div>
+<h2>Mars Hemispheres</h2>
+    <div class="row">
 
 
-  {% for hemisphere in mars.mars_h %}
-    <div class="col-md-6">
-        <div class="thumbnail">
-        <img src="{{mars.hemisphere_image_urls}}"
-            alt="uh-oh">
-        </div>
-    </div>
-  {% endfor %}
+        <div class="col-md-6">
+            <div class="box-x-long">
+              <h4>Cerberus Hemisphere Enhanced</h4>
+              <img src = http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/cerberus_enhanced.tif/full.jpg alt=Cerberus Hemisphere Enhanced width="80%" class="img-responsive">
+            </div>
+          </div>
+        
+          <div class="col-md-6">
+            <div class="box-x-long">
+              <h4>Schiaparelli Hemisphere Enhanced</h4>
+              <img src = http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/schiaparelli_enhanced.tif/full.jpg alt=Schiaparelli Hemisphere Enhanced width="80%" class="img-responsive">
+            </div>
+          </div>
+        
+          <div class="col-md-6">
+            <div class="box-x-long">
+              <h4>Syrtis Major Hemisphere Enhanced</h4>
+              <img src = http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/syrtis_major_enhanced.tif/full.jpg alt=Syrtis Major Hemisphere Enhanced width="80%" class="img-responsive">
+            </div>
+          </div>
+        
+          <div class="col-md-6">
+            <div class="box-x-long">
+              <h4>Valles Marineris Hemisphere Enhanced</h4>
+              <img src = http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/valles_marineris_enhanced.tif/full.jpg alt=Valles Marineris Hemisphere Enhanced width="80%" class="img-responsive">
+            </div>
+          </div>
+        
+      </div>
+  
 
 </div>
 

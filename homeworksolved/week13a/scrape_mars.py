@@ -54,7 +54,7 @@ def scrape():
         tweets = tweet_containers[i].text
         if "Sol " in tweets:
             mars_weather = tweets
-            break
+        break
 
 
     request_mars_space_facts = req.get("https://space-facts.com/mars/")
@@ -72,28 +72,107 @@ def scrape():
     mars_data_html.replace('\n', '')
     mars_data_df.to_html('mars_table.html')
 
+    url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
 
-    usgs_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
-    usgs_req = req.get(usgs_url)
-
-
-
-
-    soup = bs(usgs_req.text, "html.parser")
-    hemi_attributes_list = soup.find_all('a', class_="item product-item")
 
     hemisphere_image_urls = []
-    for hemi_img in hemi_attributes_list:
-        
-        img_title = hemi_img.find('h3').text
-        print(img_title)
-        link_to_img = "https://astrogeology.usgs.gov/" + hemi_img['href']
-        print(link_to_img)
-        img_request = req.get(link_to_img)
-        soup = bs(img_request.text, 'lxml')
-        img_tag = soup.find('div', class_='downloads')
-        img_url = img_tag.find('a')['href']
-        hemisphere_image_urls.append({"Title": img_title, "Image_Url": img_url})
+
+
+
+
+
+    executable_path = {'executable_path': 'chromedriver.exe'}
+    browser = Browser('chrome', **executable_path, headless=True)
+    browser.visit(url)
+
+
+    time.sleep(5)
+    browser.click_link_by_partial_text('Valles Marineris Hemisphere Enhanced')
+    time.sleep(5)
+
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+
+
+    valles_link = soup.find('div', 'downloads').a['href']
+
+
+    valles_marineris = {
+        "title": "Valles Marineris Hemisphere",
+        "img_url": valles_link
+    }
+
+
+    hemisphere_image_urls.append(valles_marineris)
+
+
+
+    executable_path = {'executable_path': 'chromedriver.exe'}
+    browser = Browser('chrome', **executable_path, headless=True)
+    browser.visit(url)
+
+    time.sleep(5)
+    browser.click_link_by_partial_text('Cerberus Hemisphere Enhanced')
+    time.sleep(5)
+
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+
+    cerberus_link = soup.find('div', 'downloads').a['href']
+
+    cerberus = {
+        "title": "Cerberus Hemisphere",
+        "img_url": cerberus_link
+    }
+
+    hemisphere_image_urls.append(cerberus)
+
+
+
+    executable_path = {'executable_path': 'chromedriver.exe'}
+    browser = Browser('chrome', **executable_path, headless=True)
+    browser.visit(url)
+
+    time.sleep(5)
+    browser.click_link_by_partial_text('Schiaparelli Hemisphere Enhanced')
+    time.sleep(5)
+
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+
+    schiaparelli_link = soup.find('div', 'downloads').a['href']
+
+    schiaparelli = {
+        "title": "Schiaparelli Hemisphere",
+        "img_url": schiaparelli_link
+    }
+
+
+    hemisphere_image_urls.append(schiaparelli)
+
+
+    executable_path = {'executable_path': 'chromedriver.exe'}
+    browser = Browser('chrome', **executable_path, headless=True)
+    browser.visit(url)
+
+    time.sleep(5)
+    browser.click_link_by_partial_text('Syrtis Major Hemisphere Enhanced')
+    time.sleep(5)
+
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+
+    syrtis_link = soup.find('div', 'downloads').a['href']
+
+
+    syrtis_major = {
+        "title": "Syrtis Major Hemisphere",
+        "img_url": syrtis_link
+    }
+
+    hemisphere_image_urls.append(syrtis_major)
+
+
 
     mars_data = {
      "News_Title": news_title,
@@ -103,4 +182,3 @@ def scrape():
      "mars_h": hemisphere_image_urls
      }
 
-    return mars_data
