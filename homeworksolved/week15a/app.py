@@ -126,7 +126,7 @@ def samples(sample):
 
     df = df.sort_values(by=sample, ascending=0)
 
-    
+
     data = [{
         "otu_ids": df[sample].index.values.tolist(),
         "sample_values": df[sample].values.tolist()
